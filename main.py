@@ -26,4 +26,9 @@ def users():
 def username_route(username):
     return render_template('username.html', username=username)
 
+@app.route('/upload',methods=['GET','POST'])
+def upload():
+    return render_template('upload.html')
+
+
 app.run()
