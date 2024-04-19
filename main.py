@@ -56,7 +56,7 @@ def get_user(username):
         username = decode_jwt(request.cookies['username'])['username']
     return username
 
-@app.route('index')
+@app.route('/index')
 @app.route('/')
 def index():
     username = get_user()
