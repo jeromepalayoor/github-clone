@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Account and Repositories</title>
+  <link rel="stylesheet" href="username.css">
+</head>
+<body>
+  <div class = 'logo-header' style="display: flex; align-items: center;">
+    <a style = 'margin-left: 7px;'href = '/'><b style="margin-right: 7px;">Code Vault</b></a>
+   
+
+<a style = 'margin-left: auto;'><b>{{username}}</b></a>
+<a style = 'margin-left: 15px; margin-right: 7px;'><b>Log Out</b></a>
+
+</div>
+  <div class="container">
+    <h1>User Account and Repositories</h1>
+
+    <div class="account-info">
+      <!-- User account information goes here -->
+      <p>Username: <strong>{{username}}</strong></p>
+     
+    </div>
+{% for repo in repos %}
+    <h2>Repositories</h2>
+    <ul class="repositories">
+      <li class="repository-item">
+        <p class="repository-name">Repository 1</p>
+        <p class="last-updated">Last Updated: April 19, 2024</p>
+      </li>
+    {% endfor %}
+      
+    </ul>
+  </div>
+
+</body>
+</html>
